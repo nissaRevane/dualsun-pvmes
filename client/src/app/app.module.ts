@@ -10,10 +10,12 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { LogoHeaderComponent } from './logo-header/logo-header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LogoHeaderComponent
   ],
   imports: [
     BrowserModule,
