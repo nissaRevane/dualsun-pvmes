@@ -28,4 +28,12 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
+
+  it('should display child components', () => {
+    fixture = TestBed.createComponent(AppComponent);
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('app-logo-header')).toBeTruthy();
+    expect(compiled.querySelector('app-pvmes-form')).toBeTruthy();
+    expect(compiled.querySelector('app-contact-footer')).toBeTruthy();
+  });
 });

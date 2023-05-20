@@ -1,0 +1,11 @@
+.logo-header {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 1%;
+  .logo {
+    width: 57px;
+    height: 49px;
+    margin: auto 0;
+  }
+}
