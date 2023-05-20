@@ -31,6 +31,9 @@ group :development, :test do
 
   # Load environment variables from .env file
   gem 'dotenv-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -40,9 +43,7 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov'
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
+  gem 'simplecov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
