@@ -18,14 +18,20 @@ customer = Customer.create!(
 )
 installation = Installation.create!(
   address: address,
-  number_of_panels: 10,
+  number_of_panels: 9,
   start_date: DateTime.new(2021, 05, 19)
 )
 
 (1..9).each do |i|
   Panel.create!(
     installation: installation,
-    type: 'hybrid',
+    technology: 'hybrid',
     serial_number: "90000#{i}"
   )
 end
+
+PvmesForm.create!(
+  company: company,
+  customer: customer,
+  installation: installation
+)

@@ -5,15 +5,15 @@ require 'rails_helper'
 RSpec.describe Panel, type: :model do
   it 'should be valid with valid attributes' do
     expect(FactoryBot.build(:panel)).to be_valid
-    expect(FactoryBot.build(:panel, type: nil)).to_not be_valid
+    expect(FactoryBot.build(:panel, technology: nil)).to_not be_valid
     expect(FactoryBot.build(:panel, serial_number: nil)).to_not be_valid
   end
 
-  describe 'type' do
-    it 'should be valid with valid types' do
-      expect(FactoryBot.build(:panel, type: 'hybrid')).to be_valid
-      expect(FactoryBot.build(:panel, type: 'photovoltaic')).to be_valid
-      expect(FactoryBot.build(:panel, type: 'road')).not_to be_valid
+  describe 'technology' do
+    it 'should be valid with valid technologies' do
+      expect(FactoryBot.build(:panel, technology: 'hybrid')).to be_valid
+      expect(FactoryBot.build(:panel, technology: 'photovoltaic')).to be_valid
+      expect(FactoryBot.build(:panel, technology: 'road')).not_to be_valid
     end
   end
 

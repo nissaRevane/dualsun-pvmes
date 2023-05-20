@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :panel do
     installation
-    type { 'hybrid' }
+    technology { 'hybrid' }
     serial_number { '900001' }
   end
 end

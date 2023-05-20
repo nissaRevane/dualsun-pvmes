@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_20_085129) do
+ActiveRecord::Schema.define(version: 2023_05_20_090822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,13 +51,27 @@ ActiveRecord::Schema.define(version: 2023_05_20_085129) do
 
   create_table "panels", force: :cascade do |t|
     t.bigint "installation_id", null: false
-    t.string "type"
+    t.string "technology"
     t.string "serial_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["installation_id"], name: "index_panels_on_installation_id"
   end
 
+  create_table "pvmes_forms", force: :cascade do |t|
+    t.bigint "company_id", null: false
+    t.bigint "customer_id", null: false
+    t.bigint "installation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_pvmes_forms_on_company_id"
+    t.index ["customer_id"], name: "index_pvmes_forms_on_customer_id"
+    t.index ["installation_id"], name: "index_pvmes_forms_on_installation_id"
+  end
+
   add_foreign_key "installations", "addresses"
   add_foreign_key "panels", "installations"
+  add_foreign_key "pvmes_forms", "companies"
+  add_foreign_key "pvmes_forms", "customers"
+  add_foreign_key "pvmes_forms", "installations"
 end
