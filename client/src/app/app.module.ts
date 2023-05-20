@@ -11,11 +11,13 @@ import {
 
 import { AppComponent } from './app.component';
 import { LogoHeaderComponent } from './logo-header/logo-header.component';
+import { ContactFooterComponent } from './contact-footer/contact-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogoHeaderComponent
+    LogoHeaderComponent,
+    ContactFooterComponent
   ],
   imports: [
     BrowserModule,
