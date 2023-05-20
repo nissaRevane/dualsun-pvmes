@@ -3,8 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe Company, type: :model do
-  # it should be valid wiith valid attributes using factory bot
-
   it 'should be valid with valid attributes' do
     expect(FactoryBot.build(:company)).to be_valid
     expect(FactoryBot.build(:company, name: nil)).to_not be_valid
