@@ -13,13 +13,15 @@ import { AppComponent } from './app.component';
 import { LogoHeaderComponent } from './logo-header/logo-header.component';
 import { ContactFooterComponent } from './contact-footer/contact-footer.component';
 import { PvmesFormComponent } from './pvmes-form/pvmes-form.component';
+import { CompanyComponent } from './pvmes-form/company/company.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoHeaderComponent,
     ContactFooterComponent,
-    PvmesFormComponent
+    PvmesFormComponent,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,
