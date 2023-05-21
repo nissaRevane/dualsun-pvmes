@@ -1,12 +1,7 @@
 <section class='app-pvmes-form-customer'>
   <h2>Informations sur l'installation</h2>
-  <form>
-    <div class='shared-form-date-line'>
-      <label for='installation-start-date'>Date de début des travaux</label>
-      <input type='date' name='installation-start-date' />
-      <span class='asterix'>*</span>
-    </div>
-  </form>
+
+  <app-shared-input [sharedInput]='installationStartDateInput'></app-shared-input>
   <app-pvmes-form-installation-address></app-pvmes-form-installation-address>
   <app-pvmes-form-installation-panels></app-pvmes-form-installation-panels>
 </section>

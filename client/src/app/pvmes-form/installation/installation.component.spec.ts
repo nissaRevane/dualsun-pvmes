@@ -25,7 +25,7 @@ describe('InstallationComponent', () => {
 
   it('should contain 1 date input', () => {
     const compiled = fixture.nativeElement;
-    const simpleLines = compiled.querySelectorAll('.shared-form-date-line');
+    const simpleLines = compiled.querySelectorAll('app-shared-input');
     expect(simpleLines.length).toEqual(1);
   });
 });

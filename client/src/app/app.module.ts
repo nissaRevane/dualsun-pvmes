@@ -22,6 +22,7 @@ import { pvmesFormReducer } from './state/pvmes-form-reducer';
 import { metaReducers } from './state/meta-reducer';
 import { AddressComponent } from './pvmes-form/installation/address/address.component';
 import { PanelsComponent } from './pvmes-form/installation/panels/panels.component';
+import { SharedInputComponent } from './shared-input/shared-input.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PanelsComponent } from './pvmes-form/installation/panels/panels.compone
     CustomerComponent,
     InstallationComponent,
     AddressComponent,
-    PanelsComponent
+    PanelsComponent,
+    SharedInputComponent
   ],
   imports: [
     BrowserModule,

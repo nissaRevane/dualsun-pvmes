@@ -25,7 +25,7 @@ describe('CustomerComponent', () => {
 
   it('should have 3 input fields', () => {
     const compiled = fixture.nativeElement;
-    const simpleLines = compiled.querySelectorAll('.shared-form-simple-line');
+    const simpleLines = compiled.querySelectorAll('app-shared-input');
     expect(simpleLines.length).toEqual(3);
   });
 });
