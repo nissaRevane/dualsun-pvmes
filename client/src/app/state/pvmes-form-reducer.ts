@@ -1,23 +1,37 @@
-import { ActionReducer ,createReducer, MetaReducer } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
+
+import { updateCompanyName } from './actions';
 
 const initialState = {
-  company: {},
-  customer: {},
-  installation: {},
-  address: {},
+  company: {
+    name: '',
+    immatriculation: ''
+  },
+  customer: {
+    name: '',
+    email: '',
+    phoneNumber: ''
+  },
+  installation: {
+    startDate: '',
+    numberOfPanels: 0
+  },
+  address: {
+    number: '',
+    street: '',
+    zipCode: '',
+    city: '',
+    country: ''
+  },
   panels: []
 };
 
-function logger(reducer: ActionReducer<any>): ActionReducer<any> {
-  return (state, action) => {
-    const currentState = reducer(state, action);
-    console.log('state before: ', state);
-    console.log('state after: ', currentState);
-
-    return currentState;
-  }
-}
-
-export const metaReducers: MetaReducer[] = [logger];
-
-export const pvmesFormReducer = createReducer(initialState);
+export const pvmesFormReducer = createReducer(
+  initialState,
+  on(
+    updateCompanyName,
+    (state, props) => {
+      return {...state, company: { ...state.company, name: props.name } }
+    }
+  )
+);

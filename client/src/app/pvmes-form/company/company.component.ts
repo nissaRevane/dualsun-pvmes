@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+
+import { updateCompanyName } from '../../state/actions';
 
 @Component({
   selector: 'app-pvmes-form-company',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompanyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
   }
 
+  updateStore(event: any) {
+    this.store.dispatch(
+      updateCompanyName( { name: event.target.value } )
+    );
+    console.log(`updateStore called with ${event.target.value}`);
+  }
 }
