@@ -15,6 +15,7 @@ import { ContactFooterComponent } from './contact-footer/contact-footer.componen
 import { PvmesFormComponent } from './pvmes-form/pvmes-form.component';
 import { CompanyComponent } from './pvmes-form/company/company.component';
 import { CustomerComponent } from './pvmes-form/customer/customer.component';
+import { InstallationComponent } from './pvmes-form/installation/installation.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CustomerComponent } from './pvmes-form/customer/customer.component';
     ContactFooterComponent,
     PvmesFormComponent,
     CompanyComponent,
-    CustomerComponent
+    CustomerComponent,
+    InstallationComponent
   ],
   imports: [
     BrowserModule,
