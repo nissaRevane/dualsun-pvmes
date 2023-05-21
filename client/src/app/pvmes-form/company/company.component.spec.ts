@@ -25,7 +25,7 @@ describe('CompanyComponent', () => {
 
   it('should have 2 input fields', () => {
     const compiled = fixture.debugElement.nativeElement;
-    const simpleLines = compiled.querySelectorAll('.shared-form-simple-line');
+    const simpleLines = compiled.querySelectorAll('app-shared-input');
     expect(simpleLines.length).toEqual(2);
   });
 });

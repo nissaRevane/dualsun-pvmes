@@ -1,35 +1,9 @@
 <section class='app-pvmes-form-installation-address'>
   <h3>Adresse</h3>
 
-  <form class='adress-form'>
-    <div class='shared-form-simple-line address-number'>
-      <label for='address-number'>N°</label>
-      <input type='text' name='address-number' placeholder='3 bis' />
-      <span class='asterix'>*</span>
-    </div>
-  
-    <div class='shared-form-simple-line address-street'>
-      <label for='address-street'>Rue</label>
-      <input type='text' name='address-number' placeholder='rue des Maguelones'/>
-      <span class='asterix'>*</span>
-    </div>
-  
-    <div class='shared-form-simple-line address-zip-code'>
-      <label for='address-zip-code'>Code postal</label>
-      <input type='text' name='address-zip-code' placeholder='34000'/>
-      <span class='asterix'>*</span>
-    </div>
-  
-    <div class='shared-form-simple-line address-city'>
-      <label for='address-city'>Ville</label>
-      <input type='text' name='address-city' placeholder='Montpellier'/>
-      <span class='asterix'>*</span>
-    </div>
-  
-    <div class='shared-form-simple-line address-country'>
-      <label for='address-country'>Pays</label>
-      <input type='text' name='address-country' placeholder='France'/>
-      <span class='asterix'>*</span>
-    </div>
-  </form>
+  <app-shared-input [sharedInput]='addressNumberInput'></app-shared-input>
+  <app-shared-input [sharedInput]='addressStreetInput'></app-shared-input>
+  <app-shared-input [sharedInput]='addressZipCodeInput'></app-shared-input>
+  <app-shared-input [sharedInput]='addressCityInput'></app-shared-input>
+  <app-shared-input [sharedInput]='addressCountryInput'></app-shared-input>
 </section>

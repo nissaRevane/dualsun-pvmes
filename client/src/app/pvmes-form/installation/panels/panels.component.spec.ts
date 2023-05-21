@@ -25,7 +25,7 @@ describe('PanelsComponent', () => {
 
   it('should have 1 input fields', () => {
     const compiled = fixture.debugElement.nativeElement;
-    const simpleLines = compiled.querySelectorAll('.shared-form-number-line');
+    const simpleLines = compiled.querySelectorAll('app-shared-input');
     expect(simpleLines.length).toEqual(1);
   });
 });

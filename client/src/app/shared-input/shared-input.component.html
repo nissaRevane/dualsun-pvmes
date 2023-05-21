@@ -1,0 +1,9 @@
+<div class='app-shared-input' [class]='typeClass'>
+  <label>{{ sharedInput.label }}</label>
+  <input
+    [type]='sharedInput.type'
+    [placeholder]='sharedInput.placeholder'
+    (input)='updateStore($event)'
+  />
+  <span class='asterix'>{{ sharedInput.asterix }}</span>
+</div>

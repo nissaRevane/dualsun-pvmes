@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-
-import { updateCompanyName } from '../../state/actions';
+import { SharedInput } from '../../models/shared-input.model';
 
 @Component({
   selector: 'app-pvmes-form-company',
@@ -9,16 +7,17 @@ import { updateCompanyName } from '../../state/actions';
   styleUrls: ['./company.component.scss']
 })
 export class CompanyComponent implements OnInit {
+  companyNameInput!: SharedInput;
+  companyImmatriculationInput!: SharedInput;
 
-  constructor(private store: Store) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  updateStore(event: any) {
-    this.store.dispatch(
-      updateCompanyName( { name: event.target.value } )
+    this.companyNameInput = new SharedInput(
+      'text', 'Nom', 'Nom de la société', '*', 'company', 'name'
     );
-    console.log(`updateStore called with ${event.target.value}`);
+    this.companyImmatriculationInput = new SharedInput(
+      'text', 'SIREN', '123456789', '*', 'company', 'immatriculation'
+    );
   }
 }

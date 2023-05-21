@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 
-import { updateCompanyName } from './actions';
+import { updateStore } from './actions';
 
 const initialState = {
   company: {
@@ -29,9 +29,15 @@ const initialState = {
 export const pvmesFormReducer = createReducer(
   initialState,
   on(
-    updateCompanyName,
-    (state, props) => {
-      return {...state, company: { ...state.company, name: props.name } }
+    updateStore,
+    (state, props: { category: string, key: string, value: string }) => {
+      return {
+        ...state,
+        [props.category]: {
+          ...state[props.category as keyof typeof state],
+          [props.key]: props.value
+        }
+      };
     }
   )
 );
