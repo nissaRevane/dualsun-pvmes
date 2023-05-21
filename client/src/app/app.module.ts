@@ -16,6 +16,10 @@ import { PvmesFormComponent } from './pvmes-form/pvmes-form.component';
 import { CompanyComponent } from './pvmes-form/company/company.component';
 import { CustomerComponent } from './pvmes-form/customer/customer.component';
 import { InstallationComponent } from './pvmes-form/installation/installation.component';
+import { StoreModule } from '@ngrx/store';
+
+import { pvmesFormReducer } from './state/pvmes-form-reducer';
+import { metaReducers } from './state/pvmes-form-reducer';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,14 @@ import { InstallationComponent } from './pvmes-form/installation/installation.co
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    StoreModule.forRoot(
+      {
+        pvmesForm: pvmesFormReducer,
+      },
+      {
+        metaReducers: metaReducers,
+      }
+    ),
   ],
   providers: [{ provide: NgbDateAdapter, useClass: NgbDateNativeUTCAdapter }],
   bootstrap: [AppComponent],
