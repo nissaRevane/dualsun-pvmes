@@ -36,13 +36,13 @@ RSpec.describe PvmesFormsController, type: :controller do
       end
 
       it 'creates a new PvmesForm' do
-        expect { post :create, params: { body: valid_params } }.to(
+        expect { post :create, body: valid_params }.to(
           change(PvmesForm, :count).by(1)
         )
       end
 
       it 'renders a JSON response with the new pvmes_form id' do
-        post :create, params: { body: valid_params }
+        post :create, body: valid_params
         expect(response).to have_http_status(:created)
         expect(response.content_type).to eq('application/json; charset=utf-8')
         expect(JSON.parse(response.body)['id']).to eq(PvmesForm.last.id)
@@ -59,7 +59,7 @@ RSpec.describe PvmesFormsController, type: :controller do
       end
 
       it 'renders a JSON response with errors for the new pvmes_form' do
-        post :create, params: { body: invalid_params }
+        post :create, body: invalid_params
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to eq('application/json; charset=utf-8')
         expect(JSON.parse(response.body)['errors']).to(

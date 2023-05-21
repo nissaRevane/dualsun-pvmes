@@ -13,7 +13,7 @@ export class PanelsComponent implements OnInit {
 
   ngOnInit(): void {
     this.panelsNumberOfPanelsInput = new SharedInput(
-      'number', 'Nombre de panneaux', '', '*', 'installation', 'numberOfPanels'
+      'number', 'Nombre de panneaux', '', '*', 'installation', 'number_of_panels'
     );
   }
 

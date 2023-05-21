@@ -13,7 +13,7 @@ export class InstallationComponent implements OnInit {
 
   ngOnInit(): void {
     this.installationStartDateInput = new SharedInput(
-      'date', 'Date de début des travaux', '', '*', 'installation', 'startDate'
+      'date', 'Date de début des travaux', '', '*', 'installation', 'start_date'
     );
   }
 }
