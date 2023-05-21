@@ -1,3 +1,10 @@
 <main class='pvmes-form'>
-  <p>pvmes-form works!</p>
+  <app-pvmes-form-company></app-pvmes-form-company>
+  <app-pvmes-form-customer></app-pvmes-form-customer>
+  <app-pvmes-form-installation></app-pvmes-form-installation>
+  <div class='form-submit'>
+    <div class='error-messages'></div>
+    <button class='btn btn-primary' (click)='submitForm()'>Envoyer</button>
+  </div>
+  <i>* champs obligatoires</i>
 </main>

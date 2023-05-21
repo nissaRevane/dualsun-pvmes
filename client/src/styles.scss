@@ -1,3 +1,21 @@
 @import "~bootswatch/dist/lumen/variables";
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/lumen/bootswatch";
+
+.shared-form-simple-line {
+  display: grid;
+  grid-template-columns: 70px 1fr 10px;
+  padding: 3px 0;
+  .asterix {
+    text-align: right;
+  }
+}
+
+.shared-form-date-line {
+  display: grid;
+  grid-template-columns: 170px 1fr 10px;
+  padding: 3px 0;
+  .asterix {
+    text-align: right;
+  }
+}

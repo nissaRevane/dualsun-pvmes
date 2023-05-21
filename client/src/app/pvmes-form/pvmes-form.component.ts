@@ -12,4 +12,7 @@ export class PvmesFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submitForm() {
+    console.log('Form submitted');
+  }
 }

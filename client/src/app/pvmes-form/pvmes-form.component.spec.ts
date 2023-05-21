@@ -22,4 +22,15 @@ describe('PvmesFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have the right child components', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    const companyComponent = compiled.querySelector('app-pvmes-form-company');
+    const companyCustomer = compiled.querySelector('app-pvmes-form-customer');
+    const companyInstallation = compiled.querySelector('app-pvmes-form-installation');
+
+    expect(companyComponent).toBeTruthy();
+    expect(companyCustomer).toBeTruthy();
+    expect(companyInstallation).toBeTruthy();
+  });
 });
