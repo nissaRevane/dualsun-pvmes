@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-pvmes-form',
@@ -7,12 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PvmesFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
   }
 
   submitForm() {
-    console.log('Form submitted');
+    this.store.select((state: any) => state.pvmesForm).subscribe((response) => {
+      fetch('http://localhost:3000/pvmes_forms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(response)
+      })
+    });
   }
 }

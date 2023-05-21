@@ -10,16 +10,16 @@ const initialState = {
   customer: {
     name: '',
     email: '',
-    phoneNumber: ''
+    phone_number: ''
   },
   installation: {
-    startDate: '',
-    numberOfPanels: 0
+    start_date: '',
+    number_of_panels: 0
   },
   address: {
     number: '',
     street: '',
-    zipCode: '',
+    zip_code: '',
     city: '',
     country: ''
   },

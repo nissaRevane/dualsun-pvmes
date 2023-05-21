@@ -23,7 +23,7 @@ export class AddressComponent implements OnInit {
       'text', 'Rue', 'Route de Vaux', '*', 'address', 'street'
     );
     this.addressZipCodeInput = new SharedInput(
-      'text', 'Code postal', '38000', '*', 'address', 'zipCode'
+      'text', 'Code postal', '38000', '*', 'address', 'zip_code'
     );
     this.addressCityInput = new SharedInput(
       'text', 'Ville', 'Grenoble', '*', 'address', 'city'

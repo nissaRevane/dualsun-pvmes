@@ -21,7 +21,7 @@ export class CustomerComponent implements OnInit {
       'text', 'Email', 'prenom@gmail.com', '*', 'customer', 'email'
     );
     this.customerPhoneNumberInput = new SharedInput(
-      'text', 'Téléphone', '0603040507', '', 'customer', 'phoneNumber'
+      'text', 'Téléphone', '0603040507', '', 'customer', 'phone_number'
     );
   }
 }

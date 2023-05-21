@@ -2,7 +2,7 @@
 
 class PvmesFormsController < ApplicationController
   def create
-    payload = JSON.parse(params[:body], symbolize_names: true)
+    payload = JSON.parse(request.body.read, symbolize_names: true)
     constructor = PvmesFormConstructor.new(payload)
     created_id = constructor.call
 
