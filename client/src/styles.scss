@@ -19,3 +19,12 @@
     text-align: right;
   }
 }
+
+.shared-form-number-line {
+  display: grid;
+  grid-template-columns: 170px 1fr 10px;
+  padding: 3px 0;
+  .asterix {
+    text-align: right;
+  }
+}

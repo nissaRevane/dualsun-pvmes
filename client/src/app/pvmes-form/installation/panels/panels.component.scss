@@ -1,0 +1,8 @@
+.shared-form-simple-line {
+  display: grid;
+  grid-template-columns: 75px 1fr 10px;
+  padding: 3px 0;
+  .asterix {
+    text-align: right;
+  }
+}
