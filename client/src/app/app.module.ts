@@ -20,6 +20,8 @@ import { StoreModule } from '@ngrx/store';
 
 import { pvmesFormReducer } from './state/pvmes-form-reducer';
 import { metaReducers } from './state/pvmes-form-reducer';
+import { AddressComponent } from './pvmes-form/installation/address/address.component';
+import { PanelsComponent } from './pvmes-form/installation/panels/panels.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { metaReducers } from './state/pvmes-form-reducer';
     PvmesFormComponent,
     CompanyComponent,
     CustomerComponent,
-    InstallationComponent
+    InstallationComponent,
+    AddressComponent,
+    PanelsComponent
   ],
   imports: [
     BrowserModule,
